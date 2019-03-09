@@ -13,7 +13,7 @@ var tbody = table.select("tbody");
 data.forEach((Report) => {
   var row = tbody.append("tr");
   Object.entries(Report).forEach(([key, value]) => {
-    var cell = tbody.append("td");
+    var cell = row.append("td");
     cell.text(value);
   });
 });
@@ -39,9 +39,8 @@ var submit = d3.select("#filter-btn");
     filteredData.forEach((Report) => {
     var row = tbody.append("tr");
     Object.entries(Report).forEach(([key, value]) => {
-    var cell = tbody.append("td");
+    var cell = row.append("td");
     cell.text(value);
-
   });
   });
   });
